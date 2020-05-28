@@ -1,0 +1,81 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- mood_hungry
+- select_local_dish
+- select_international_dish
+- select_which_local_dish
+- select_which_international_dish
+- tell_name
+- register_for_election
+- name_entry
+- email_entry
+- local_govt_entry
+- buy_gadget
+entities:
+- name
+- email
+- gadget
+- local_govt
+slots:
+  full_name:
+    type: unfeaturized
+  gadget:
+    type: text
+  user_email:
+    type: unfeaturized
+  local_govt:
+    type: unfeaturized
+responses:
+  utter_greet:
+  - text: Hi! what can i help you with today?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_which_dish:
+  - text: Do you want a local or traditional dish?
+  utter_which_local_dish:
+  - text: We have Fufu, Amala, and Eba. Which do you prefer?
+  utter_which_international_dish:
+  - text: We have rice, brocolli and cauli flower. Which do you prefer?
+  utter_order_completed:
+  - text: Your order is on its way. Just a second!
+  utter_ask_full_name:
+  - text: What is your name?
+  utter_ask_user_email:
+  - text: What is your email address?
+  utter_ask_local_govt:
+  - text: Which local government do you belong too?
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_which_dish
+- utter_which_local_dish
+- utter_which_international_dish
+- utter_order_completed
+- action_tell_name
+- action_request_action
+- utter_ask_full_name
+- utter_ask_user_email
+forms:
+- user_details_form
